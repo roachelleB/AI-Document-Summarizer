@@ -27,7 +27,7 @@ function Dashboard() {
         const token = localStorage.getItem("access_token")
 
 const response = await axios.post(
-  "http://127.0.0.1:8000/documents/upload",
+  "https://ai-document-summarizer-mgq6.onrender.com/documents/upload",
   formData,
   {
     headers: {
@@ -46,7 +46,7 @@ console.log("Uploaded document:", response.data.document)
   console.log("Selected summary length:", summaryLength)
 
   const response = await axios.post(
-    "http://127.0.0.1:8000/summaries/generate",
+    "https://ai-document-summarizer-mgq6.onrender.com/summaries/generate",
     {
       document_id: uploadedDocument.id,
       summary_length: summaryLength,
