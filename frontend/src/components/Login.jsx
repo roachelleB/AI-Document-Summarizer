@@ -81,8 +81,15 @@ onChange={(e) => setPassword(e.target.value)}
         </form>
 
         <p className="text-center text-sm text-gray-500 mt-6">
-          Don't have an account? Sign up
-        </p>
+  Don't have an account?{" "}
+  <button
+    type="button"
+    onClick={() => navigate("/signup")}
+    className="text-blue-600 font-semibold hover:underline"
+  >
+    Sign up
+  </button>
+</p>
       </div>
     </div>
   )
